@@ -7,12 +7,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 600px;
+    height: 80vh;
 
     h2 {
         text-align: center;
         font-size: 1.8rem;
-        margin-bottom: 1.5rem;
+        margin-top: 40px;margin-bottom: 10px;
         color: #333;
     }
 
@@ -54,23 +54,30 @@
     width: 100%;
 }
 
-
-@media (width >=48rem) {
-
+/*@media (max-width: 64rem) {
     .task-box {
-        height: 76vh;
+        height: 83vh;
     }
 
     mat-card-title {
+
         font-size: xx-large;
     }
 
-    #duty,#status{
+    #duty {
+
         font-size: xx-large;
     }
 
-    h2 {
-        font-size: 3rem;
+    #status {
+        font-size: xx-large;
     }
 
-}
+    #title {
+        font-size: 52px;
+    }
+
+    
+
+
+}*/
