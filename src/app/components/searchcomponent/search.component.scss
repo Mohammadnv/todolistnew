@@ -1,0 +1,37 @@
+.search-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+}
+
+#search {
+    width: 310px;
+    border: 2px solid darkblue;
+    border-radius: 6px;
+}
+
+#searchbtn {
+    width: 35px;
+    height: 35px;
+    margin-left: 5px;
+    border: 2px solid darkblue;
+    border-radius: 6px;
+}
+
+@media (width >=48rem) {
+
+    #search {
+
+        width: 30vh;
+        height: 75px;
+        font-size: xx-large;
+    }
+
+    #searchbtn{
+        width: 75px;
+        height: 75px;
+        
+    }
+
+}

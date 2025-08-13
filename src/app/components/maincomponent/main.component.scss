@@ -1,0 +1,28 @@
+html {
+    margin: 0;
+}
+
+.main-div {
+    height: 98vh;
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 6px;
+    align-items: center;
+    background-color: aliceblue;
+    border: 2px solid darkblue;
+    border-radius: 6px;
+}
+
+
+
+@media only screen and (max-width : 600px) {
+
+    .main-div {
+        height: 100vh;
+        width: 100%;
+
+        margin: 0;
+    }
+}
