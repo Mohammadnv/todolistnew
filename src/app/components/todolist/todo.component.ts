@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, input, OnInit } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { TodolistService } from '../../services/todolist/todolist.service';
 import { todoitems } from '../../services/todolist/todolist.model';
@@ -15,18 +15,30 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
 })
 
 export class TodoComponent implements OnInit {
-    constructor(private todolistservice: TodolistService) { }
-    items = Array.from({ length: 100000 }).map((_, i) => `Item #${i}`);
 
+    @Input() filtertext:string =""
+    
+
+    constructor(private todolistservice: TodolistService) { }
+    
+    items = Array.from({ length: 100000 }).map((_, i) => `Item #${i}`);
     todos: todoitems[] = []
     filtertodos: todoitems[]=[]
 
 
+    
+
     ngOnInit() {
         this.todolistservice.gettodolist().subscribe((data: todoitems[]) => {
-            console.log(data)
+            //console.log(data)
             this.todos = data;
             this.filtertodos = data
         })
+    }
+
+    ngOnChanges(){
+        this.filtertodos = this.todos.filter(todo => todo.todo.toLowerCase().includes(this.filtertext.toLowerCase()))
+        console.log(this.filtertodos)
+        debugger
     }
 }

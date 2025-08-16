@@ -1,0 +1,14 @@
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<body>
+    <div class="main-div">
+        <search-selector style="margin-top: 80px;" (searchchanged)="onSearchChanged($event)"></search-selector>
+        <div style="width: 80%; margin: auto;">
+            <todo-selector style="width: 100%; height: 100%;" [filtertext]="searchText"></todo-selector>
+        </div>
+    </div>
+
+</body>
+
+</html>

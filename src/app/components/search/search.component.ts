@@ -7,18 +7,20 @@ import { CommonModule } from '@angular/common';
     selector: 'search-selector',
     templateUrl: 'search.component.html',
     styleUrls: ['search.component.scss'],
-    imports: [FormsModule, CommonModule]
+    imports: [FormsModule, CommonModule,]
 })
 
 export class SearchComponent implements OnInit {
-    constructor( private todoservice : TodolistService) { }
 
-    searchvalue : string ="";
+    @Output() searchchanged = new EventEmitter<string>();
+    searchvalue: string = ""
 
-    @Output() searchchange = new EventEmitter<string>();
 
-    searchterm(){
-        this.searchchange.emit(this.searchvalue);
+    constructor() { }
+
+    searchbtn() {
+        this.searchchanged.emit(this.searchvalue)
+       debugger
     }
 
     ngOnInit() { }

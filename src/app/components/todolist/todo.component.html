@@ -1,0 +1,19 @@
+<div class="task-box">
+  <h2 id="title">لیست وظایف</h2>
+
+  <cdk-virtual-scroll-viewport itemSize="100" class="example-viewport">
+    <div *ngIf="filtertodos.length === 0" class="empty-message">
+      <p>هیچ وظیفه‌ای مطابق با فیلتر یافت نشد.</p>
+    </div>
+
+    <mat-card *ngFor="let todo of filtertodos" class="task-card">
+      <mat-card-header>
+        <mat-card-title id="usernum">شناسه کاربر: {{ todo.userId }}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p id="duty">وظیفه: {{ todo.todo }}</p>
+        <p id="status">وضعیت: {{ todo.completed ? 'انجام شده' : 'در حال انجام' }}</p>
+      </mat-card-content>
+    </mat-card>
+  </cdk-virtual-scroll-viewport>
+</div>

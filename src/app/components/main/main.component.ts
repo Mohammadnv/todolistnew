@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { SearchComponent } from '../searchcomponent/search.component';
-import { TodoComponent } from "../todolistcomponent/todo.component";
+import { SearchComponent } from '../search/search.component';
+import { TodoComponent } from "../todolist/todo.component";
 
 @Component({
     selector: 'main-selector',
@@ -10,6 +10,14 @@ import { TodoComponent } from "../todolistcomponent/todo.component";
 })
 
 export class MainComponent implements OnInit {
+
+    searchText: string = '';
+
+    onSearchChanged(value: string) {
+        this.searchText = value;
+        debugger
+    }
+
     constructor() { }
 
     ngOnInit() { }
