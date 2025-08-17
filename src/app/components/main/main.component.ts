@@ -1,12 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Signal, signal } from '@angular/core';
 import { SearchComponent } from '../search/search.component';
-import { TodoComponent } from "../todolist/todo.component";
+import { TodoComponent } from '../todolist/todo.component';
+
 
 @Component({
     selector: 'main-selector',
     templateUrl: 'main.component.html',
     styleUrls: ['main.component.scss',],
-    imports: [SearchComponent, TodoComponent]
+    imports: [SearchComponent,TodoComponent ]
 })
 
 export class MainComponent implements OnInit {

@@ -11,6 +11,10 @@ import { CommonModule } from '@angular/common';
 })
 
 export class SearchComponent implements OnInit {
+todo: any;
+convertToJalali(arg0: any) {
+throw new Error('Method not implemented.');
+}
 
     @Output() searchchanged = new EventEmitter<string>();
     searchvalue: string = ""
@@ -20,8 +24,10 @@ export class SearchComponent implements OnInit {
 
     searchbtn() {
         this.searchchanged.emit(this.searchvalue)
-       debugger
+        debugger
     }
+
+    today = new Date()
 
     ngOnInit() { }
 }

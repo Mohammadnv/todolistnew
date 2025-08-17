@@ -1,18 +1,12 @@
 .task-box {
-    width: 100%;
-    /*background-color: #f9f9f9;*/
-    border-radius: 12px;
-    /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);*/
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 80vh;
+    margin-top: 35px;
+    height: 84%;
 
     h2 {
         text-align: center;
         font-size: 1.8rem;
-        margin-top: 40px;margin-bottom: 10px;
+        margin-top: 40px;
+        margin-bottom: 10px;
         color: #333;
     }
 
@@ -22,36 +16,67 @@
     }
 }
 
+
+mat-card {
+    background-color: white;
+    margin-left: 35px;
+    margin-right: 35px;
+    border-radius: 18px;
+    text-align: right;
+    box-shadow: 3px 3px lightgray;
+}
+
+
 .task-card {
     margin-bottom: 1rem;
     transition: transform 0.2s ease-in-out;
 
     &:hover {
         transform: scale(1.02);
+
     }
 
     mat-card-header {
-        background-color: #e0f7fa;
-        border-bottom: 1px solid #ccc;
-    }
-
-    mat-card-title {
-        font-weight: bold;
-        color: #00796b;
-    }
-
-    mat-card-content {
-        padding: 0.5rem 1rem;
-
-        p {
-            margin: 0.5rem 0;
-        }
+        justify-content: right;
     }
 }
+
+mat-card-title {}
+
+mat-card-content {}
+
+
+
 
 .example-viewport {
     height: 100%;
     width: 100%;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 28px;
+}
+
+button {
+    cursor: pointer;
+    z-index: 10000;
+}
+button:active{
+    text-decoration: underline ;
+}
+
+br {
+    line-height: 6px;
+}
+
+.done{
+    box-shadow: 3px 3px lightgreen;
+}
+
+.pending{
+    box-shadow: 3px 3px red;
 }
 
 /*@media (max-width: 64rem) {
@@ -80,4 +105,69 @@
     
 
 
+}
+
+@media (width >=80rem) {
+    #usernum {
+        font-size: xx-large;
+    }
+
+    #duty {
+        font-size: xx-large;
+    }
+
+    #status {
+        font-size: xx-large;
+    }
+
+    #title {
+        font-size: 80px;
+        margin-bottom: 42px;
+    }
+}
+
+/*
+.todolist {
+    display: flex;
+    flex-direction: column;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 18px;
+}
+
+.buttons button {
+    font-weight: bold;
+    font-size: large;
+}
+
+.buttons button:active {
+    text-decoration: underline;
+}
+
+.task-card {
+    background-color: white;
+    width: 80%;
+    height: 75px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+}
+
+.task-list {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 28px;
+    height: 80%;
+    width: 100%;
+    overflow: auto;
+}
+
+.example-viewport {
+    height: 100%;
+    width: 100%;
 }*/

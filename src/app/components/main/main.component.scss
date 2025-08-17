@@ -2,7 +2,7 @@ html {
     margin: 0;
 }
 
-.main-div {
+/*.main-div {
     height: 98vh;
     width: 35%;
     display: flex;
@@ -10,7 +10,7 @@ html {
     margin: auto;
     margin-top: 6px;
     align-items: center;
-    background-color: aliceblue;
+    background-color: #4d5bbd;
     border: 2px solid darkblue;
     border-radius: 6px;
 }
@@ -47,4 +47,24 @@ html {
     }
 
 
+}
+
+@media (width >=80rem) {
+    .main-div {
+        height: 100vh;
+        width: 100%;
+        margin: 0;
+        margin-top: 0;
+        border: none;
+    }
+    search-selector{
+        width: 100%;
+    }
+}*/
+
+
+.main-div {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 }

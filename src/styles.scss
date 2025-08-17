@@ -6,3 +6,21 @@ html,body{
 @import "tailwindcss";
 
 
+@font-face {
+    font-family: vazirlight;
+    src: url(../public/fonts/Vazir-Light.woff);
+}
+
+@font-face {
+    font-family: vazirmedium;
+    src: url(../public/fonts/Vazir-Medium.woff);
+}
+
+@font-face {
+    font-family: vazirbold;
+    src: url(../public/fonts/Vazir-Bold.woff);
+}
+
+*{
+    font-family: vazirmedium;
+}
