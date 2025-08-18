@@ -2,69 +2,183 @@ html {
     margin: 0;
 }
 
-/*.main-div {
-    height: 98vh;
-    width: 35%;
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    margin-top: 6px;
-    align-items: center;
-    background-color: #4d5bbd;
-    border: 2px solid darkblue;
-    border-radius: 6px;
-}
-
-@media (max-width: 40rem) {
-    .main-div {
-        height: 100vh;
-        width: 100%;
-        margin: 0;
-        margin-top: 0;
-        border: none;
-    }
-}
-
-@media (max-width: 48rem) {
-    .main-div {
-        height: 100vh;
-        width: 100%;
-        margin: 0;
-        margin-top: 0;
-        border: none;
-
-    }
-}
-
-@media (max-width: 64rem) {
-    .main-div {
-        height: 100vh;
-        width: 100%;
-        margin: 0;
-        margin-top: 0;
-        border: none;
-
-    }
-
-
-}
-
-@media (width >=80rem) {
-    .main-div {
-        height: 100vh;
-        width: 100%;
-        margin: 0;
-        margin-top: 0;
-        border: none;
-    }
-    search-selector{
-        width: 100%;
-    }
-}*/
-
 
 .main-div {
     height: 100vh;
     display: flex;
     flex-direction: column;
+}
+
+.div-todo {
+    height: 66%;
+    margin-top: -10px;
+    background-color: #f6f5f8;
+    border-radius: 10px;
+}
+
+.add-btn {
+    background-color: #4d5abf;
+    background-color: #4d5abf;
+    height: 40%;
+    width: 40px;
+    border-radius: 10px;
+    box-shadow: 5px 5px lightgrey;
+}
+
+.buttom-div {
+    height: 15%;
+    display: flex;
+    background-color: f6f5f8;
+    flex-direction: row-reverse;
+    align-items: center;
+    padding-bottom: 30px;
+    padding-right: 15px;
+}
+
+.searchselector {
+    width: 100%;
+    height: 24%;
+    background-color: #4d5bbd;
+}
+
+.pop-up {
+    width: 82%;
+    height: 34%;
+    background-color: #6974c9;
+    position: absolute;
+    bottom: 260px;
+    left: 40px;
+    border-radius: 16px;
+}
+
+
+
+.popup-stra {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.popup-inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 300px;
+}
+
+.popup-inputs input {
+    background-color: white;
+    height: 43px;
+    width: 80%;
+    border-radius: 16px;
+}
+
+.popup-inputs label {
+    font-size: medium;
+    margin-top: 10px;
+    color: white;
+}
+
+.popup-submite {
+    background-color: white;
+    border-radius: 16px;
+    width: 80%;
+    margin-top: 100px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    font-size: medium;
+}
+
+
+@media (width >=48rem) {
+    .div-todo {
+        height: 55%;
+    }
+
+    .buttom-div {
+        padding-bottom: 50px;
+        padding-right: 30px;
+    }
+
+    .pop-up {
+        left: 72px;
+        bottom: 352px;
+    }
+
+}
+
+@media (width >=64rem) {
+    .searchselector {
+        height: 15%;
+    }
+
+    .div-todo {
+        height: 42%;
+    }
+
+    .buttom-div {
+        flex-direction: column;
+        align-items: end;
+        padding-right: 50px;
+    }
+
+    .add-btn {
+        width: 75px;
+        height: 75px;
+    }
+
+}
+
+@media (width >=80rem) {
+    .searchselector {
+        height: 25%;
+    }
+
+    .div-todo {
+        height: 40%;
+    }
+
+    .buttom-div {
+        flex-direction: column;
+        align-items: end;
+        padding-top: 140px;
+        padding-right: 55px;
+    }
+
+    .pop-up {
+        width: 70%;
+        height: 20%;
+        left: 317px;
+        bottom: 50%;
+    }
+
+    .popup-inputs input {
+        height: 60px;
+    }
+
+    .popup-inputs label {
+        font-size: x-large;
+    }
+
+    .popup-inputs {
+        margin-top: 60px;
+    }
+
+    .popup-submite {
+        margin-top: 38px;
+    }
+
+}
+
+@media (width >=96rem) {
+    .div-todo {
+        height: 70%;
+    }
+
+    .pop-up {
+        height: 25%;
+    }
 }

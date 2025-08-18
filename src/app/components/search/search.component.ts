@@ -11,10 +11,8 @@ import { CommonModule } from '@angular/common';
 })
 
 export class SearchComponent implements OnInit {
-todo: any;
-convertToJalali(arg0: any) {
-throw new Error('Method not implemented.');
-}
+    todo: any;
+
 
     @Output() searchchanged = new EventEmitter<string>();
     searchvalue: string = ""
