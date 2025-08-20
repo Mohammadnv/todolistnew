@@ -7,13 +7,19 @@ html {
     height: 100vh;
     display: flex;
     flex-direction: column;
+    background-color: #f0faf9;
 }
 
 .div-todo {
-    height: 66%;
-    margin-top: -10px;
-    background-color: #f6f5f8;
+    height: 68%;
+    width: 84%;
+    /* margin: auto; */
+    background-color: #ebf3ec;
     border-radius: 10px;
+    border: solid 2px black;
+    margin-left: 35px;
+    margin-right: 35px;
+    margin-top: 30px;
 }
 
 .add-btn {
@@ -31,154 +37,67 @@ html {
     background-color: f6f5f8;
     flex-direction: row-reverse;
     align-items: center;
-    padding-bottom: 30px;
-    padding-right: 15px;
+    //padding-bottom: 30px;
+    padding-bottom: 25px;
+    padding-right: 30px;
 }
 
 .searchselector {
     width: 100%;
     height: 24%;
-    background-color: #4d5bbd;
-}
-
-.pop-up {
-    width: 82%;
-    height: 34%;
-    background-color: #6974c9;
-    position: absolute;
-    bottom: 260px;
-    left: 40px;
-    border-radius: 16px;
+    background-color: #f0faf9;
 }
 
 
-
-.popup-stra {
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-}
-
-.popup-inputs {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: 300px;
-}
-
-.popup-inputs input {
-    background-color: white;
-    height: 43px;
-    width: 80%;
-    border-radius: 16px;
-}
-
-.popup-inputs label {
-    font-size: medium;
-    margin-top: 10px;
-    color: white;
-}
-
-.popup-submite {
-    background-color: white;
-    border-radius: 16px;
-    width: 80%;
-    margin-top: 100px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    margin: auto;
-    font-size: medium;
-}
+//responsive querys//
 
 
-@media (width >=48rem) {
+@media only screen and (max-width: 375px) {
     .div-todo {
-        height: 55%;
-    }
-
-    .buttom-div {
-        padding-bottom: 50px;
-        padding-right: 30px;
-    }
-
-    .pop-up {
-        left: 72px;
-        bottom: 352px;
-    }
-
-}
-
-@media (width >=64rem) {
-    .searchselector {
-        height: 15%;
-    }
-
-    .div-todo {
-        height: 42%;
-    }
-
-    .buttom-div {
-        flex-direction: column;
-        align-items: end;
-        padding-right: 50px;
-    }
-
-    .add-btn {
-        width: 75px;
-        height: 75px;
-    }
-
-}
-
-@media (width >=80rem) {
-    .searchselector {
-        height: 25%;
-    }
-
-    .div-todo {
-        height: 40%;
-    }
-
-    .buttom-div {
-        flex-direction: column;
-        align-items: end;
-        padding-top: 140px;
-        padding-right: 55px;
-    }
-
-    .pop-up {
-        width: 70%;
-        height: 20%;
-        left: 317px;
-        bottom: 50%;
-    }
-
-    .popup-inputs input {
-        height: 60px;
-    }
-
-    .popup-inputs label {
-        font-size: x-large;
-    }
-
-    .popup-inputs {
+        width: 82%;
+        height: 63%;
         margin-top: 60px;
     }
-
-    .popup-submite {
-        margin-top: 38px;
-    }
-
 }
 
-@media (width >=96rem) {
+@media only screen and (min-width: 768px) {
     .div-todo {
-        height: 70%;
-    }
-
-    .pop-up {
-        height: 25%;
+        width: 91%;
+        height: 59%;
     }
 }
+
+@media only screen and (min-width: 820px) {
+    .div-todo {
+        height: 95%;
+        width: 96%;
+        margin-top: 0px;
+        border: solid black 4px;
+    }
+}
+
+/*@media only screen and (min-width: 1024px) {
+    .main-div {
+        height: 98vh;
+    }
+
+    search-selector.searchselector{
+        height: 19%;
+    }
+
+    .div-todo{
+        height: 46%;
+        width: 97%;
+    }
+}*/
+
+@media only screen and (min-width: 1280px) {
+    .searchselector{
+        height: 30%;
+    }
+
+    .div-todo{
+        height: 67%;
+    }
+}
+

@@ -3,18 +3,27 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <div class="top">
-
-    <p>{{ today | date:'MMMM d' }}
-    <h1>لیست وظایف</h1>
+    <div class="times">
+        <p id="date">{{ today | date:'MMMM d' }}</p>
+        <p id="clock">{{ currentTime }}</p>
+    </div>
+    <div>
+        <h1>لیست وظایف</h1>
+    </div>
 </div>
 
 
 <div class="search-box">
     <input type="search" id="search" placeholder="جستوجو" [(ngModel)]="searchvalue">
     <button id="searchbtn" (click)="searchbtn()">
-        <i class="material-icons" style="font-size:26px">search</i>
-
+        <i class="material-icons">search</i>
     </button>
 
 
+
+</div>
+
+<div class="div-addtask">
+    <button  (click)="openform()" class="addinftaskbtn"><i  id="addicon" class="material-icons" >add</i>
+    </button>
 </div>

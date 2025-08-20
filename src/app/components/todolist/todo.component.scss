@@ -1,6 +1,8 @@
 .task-box {
-    margin-top: 35px;
     height: 84%;
+    width: 105%;
+    margin: auto;
+    margin-top: 20px;
 
     h2 {
         text-align: center;
@@ -24,6 +26,7 @@ mat-card {
     border-radius: 18px;
     text-align: right;
     box-shadow: 3px 3px lightgray;
+    border: solid black 2px;
 }
 
 
@@ -36,12 +39,26 @@ mat-card {
 
     }
 
-    mat-card-header {
-        justify-content: right;
-    }
+
 }
 
-mat-card-title {}
+mat-card-content {
+    font-size: 14px;
+    font-family: vazirbold;
+}
+
+mat-card-title {
+    font-size: 14px;
+    font-family: vazirbold;
+}
+
+#duty {
+    font-size: 14px;
+}
+
+#status {
+    font-size: 14px;
+}
 
 
 .example-viewport {
@@ -58,39 +75,237 @@ mat-card-title {}
 button {
     cursor: pointer;
     z-index: 10000;
+    font-size: 14px;
 }
-button:active{
-    text-decoration: underline ;
+
+.buttons button {
+    cursor: pointer;
+    z-index: 10000;
+    font-size: 13px;
+    background: #f3bc14;
+    padding: 9px;
+    border: 2px solid black;
+    border-radius: 16px;
+}
+
+button:active {
+    text-decoration: underline;
 }
 
 br {
     line-height: 6px;
 }
 
-.done{
-    box-shadow: 3px 3px lightgreen;
+
+//.done {
+//  box-shadow: 3px 3px lightgreen;
+//}
+
+//.pending {
+// box-shadow: 3px 3px red;
+//}
+
+.pop-up {
+    width: 82%;
+    height: 34%;
+    background-color: #6974c9;
+    position: absolute;
+    bottom: 260px;
+    left: 40px;
+    border-radius: 16px;
 }
 
-.pending{
-    box-shadow: 3px 3px red;
+.addtask {
+    height: 13%;
+    background-color: #f6f5f8;
+    text-align: end;
 }
 
-@media (width >=64rem) {
-    .buttons button{
+.addtask button {
+    background: #4d5abf;
+    border-radius: 10px;
+    margin-right: 28px;
+    height: 45px;
+    width: 45px;
+    margin-top: 20px;
+}
+
+.popup {
+    height: 300px;
+    background: #f0faf9;
+    position: absolute;
+    top: 25%;
+    left: 8%;
+    width: 85%;
+    border-radius: 16px;
+    border: solid #000000 3px;
+    z-index: 100000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup input {
+    background-color: #ebf3ec;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.donebtn {
+    cursor: pointer;
+    font-size: 16px;
+    background: #f3bc14;
+    width: 100%;
+    margin-left: 0px;
+    border-radius: 0px 0px 16px 16px;
+    color: black;
+    padding: 2px;
+    border-top: solid black 2px;
+}
+
+.donebtn:hover {
+    background-color: #f3bb14a4;
+}
+
+#deletbtn {
+    font-size: 20px
+}
+
+.deletebtn {
+    background: #f3bc14;
+    border-radius: 180%;
+    padding: 3px;
+}
+
+.headercard {
+    justify-content: space-between;
+    flex-direction: row-reverse;
+}
+
+mat-card.mat-mdc-card.mdc-card.task-card {
+    background-color: #f0faf9;
+}
+
+.popupbuttons {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    margin-top: 30px;
+}
+
+.popupbuttons button {
+    border: 2px solid black;
+    padding: 8px;
+    border-radius: 10px;
+}
+
+#addbtnpopup {
+    background: green;
+    color: white;
+}
+
+#canceltaskpopup{
+    background: red;
+    color: white;
+}
+
+
+
+
+
+@media only screen and (max-width: 375px) {
+    .task-box {
+        height: 78%;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    .example-viewport {
+
+        width: 95%;
+
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+
+    .example-viewport {
+        min-width: 96%;
+    }
+
+    mat-card.mat-mdc-card.mdc-card.task-card {
+        width: 93%;
+        height: 295px;
+        border: solid black 5px;
+        margin-top: 5px;
+    }
+
+    .buttons {
+        margin-top: 0px;
+    }
+
+    #alldutys {
+        width: 50%;
+        border-right: 2.5px solid black;
+        border-radius: 10px 0px 0px 0px;
+    }
+
+    #donedutys {
+        width: 50%;
+        border-left: 2.5px solid black;
+        border-radius: 0px 10px 0px 0px;
+    }
+
+    .buttons button {
+        border: none;
+        border-radius: 0px;
+        border-bottom: 5px solid black;
+        height: 70px;
+        font-size: 28px;
+    }
+
+    mat-card-content {
+        font-size: xx-large;
+        font-family: vazirbold;
+    }
+
+    mat-card-title {
+        font-size: xx-large;
+        font-family: vazirbold;
+    }
+
+    #duty {
         font-size: x-large;
     }
 
-    #usernum{
+    #status {
         font-size: x-large;
     }
 
-    #duty-title p{
-        font-size: x-large;
+    #duty-title p {
+        font-size: xx-large;
     }
-}
 
-@media (width >= 80rem) {
-    .task-box{
-        height: 100%;
+    .donebtn {
+        border-top: 5px-solid black;
+        height: 75px;
+        font-size: 28px;
     }
+
+    .task-box {
+        margin-top: 25px;
+        height: 90%;
+    }
+
+    button.donebtn {
+        border-top: solid black 5px;
+    }
+
+    .task-box {
+        width: 98%;
+    }
+
+
 }

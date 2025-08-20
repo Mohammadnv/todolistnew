@@ -7,23 +7,25 @@
 
 #search {
     width: 310px;
-
     border-radius: 6px;
-    background: white;
+    background: #ebf3ec;
     padding-left: 10px;
     margin-left: 35px;
     text-align: right;
+    border: solid black 2px;
 }
 
 
 #searchbtn {
-    width: 35px;
+    width: 45px;
     height: 35px;
     margin-left: 5px;
-    background-color: 6974c9;
+    background-color: #f3bc14;
     border-radius: 6px;
-    color: white;
+    color: black;
+    border: solid 2px black;
     margin-right: 35px;
+    cursor: pointer;
 }
 
 .top {
@@ -33,83 +35,198 @@
     margin-top: 30px;
 }
 
-.top p {
-    width: 45px;
-    height: 45px;
-    border: solid 0px #ffffff;
+.times p {
+    width: 50px;
+    height: 50px;
     border-radius: 6px;
-    font-size: small;
-    //font-weight: 600;
+    font-size: 11px;
     align-content: center;
     text-align: center;
-    background-color: #6974c9;
-    color: white;
-    margin-left: 35px;
+    background-color: #f3bc14;
+    color: black;
+    border: solid 2px black;
 }
 
 .top h1 {
-    font-size: xx-large;
-    color: white;
+    font-size: 26px;
+    color: rgb(0, 0, 0);
     padding-right: 35px;
     font-family: vazirbold;
 }
 
-@media (width >=48rem) {
-    #search {
-        width: 85%;
+.times {
+    display: flex;
+}
+
+#date {
+    margin-left: 35px;
+}
+
+#clock {
+    margin-left: 3px;
+}
+
+.addtask {
+    border: 2px solid black;
+}
+
+#addicon{
+    font-size:36px
+}
+
+.div-addtask {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 22%;
+    width: 344px;
+    border-radius: 10px;
+    border: solid black 2px;
+    margin-top: 10px;
+    margin-left: 35px;
+    margin-right: 35px;
+    background-color: #ebf3ec;
+}
+
+.div-addtask button{
+    
+}
+
+
+@media only screen and (min-width: 360px) {
+    .div-addtask {
+        width: 292px;
     }
 }
 
-@media (width >=64rem) {
+@media only screen and (min-width: 375px) {
+    .div-addtask {
+        width: 308px;
+    }
+}
+
+@media only screen and (min-width: 390px) {
+    .div-addtask {
+        width: 323px;
+    }
+}
+
+@media only screen and (min-width: 414px) {
+    .div-addtask {
+        width: 347px;
+    }
+}
+
+@media only screen and (min-width: 412px) {
+    .div-addtask {
+        width: 344px;
+    }
+}
+
+@media only screen and (min-width: 430px) {
+    .div-addtask {
+        width: 362px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
     #searchbtn {
         width: 11%;
-        height: 85px;
-    }
-
-    .top {
-        margin-top: 90px;
-    }
-
-    .top h1 {
-        font-size: 50px;
-        font-family: vazirbold;
-    }
-
-    .top p {
-        width: 75px;
-        height: 75px;
-        font-size: larger;
     }
 
     #search {
-        font-size: x-large;
+        width: 80%;
     }
 
-    .searchselector{
-        height: 15px;
+    .div-addtask {
+        width: 91%;
+    }
+
+    #clock {
+        height: 40px;
+        width: 80px;
+    }
+
+    #date {
+        height: 40px;
+        width: 80px;
     }
 }
 
-@media (width >=80rem) {
-    #searchbtn{
-        width: 13%;
-    }
-
+@media only screen and (min-width: 820px) {
     .top h1 {
-        padding-right: 50px;
+        font-size: 47px;
     }
 
-    .searchselector{
-        height: 15%;
+    #clock {
+        height: 70px;
+        width: 200px;
+        font-size: 25px;
+        margin-left: 10px;
+        border: solid black 4px;
     }
 
-    .div-todo{
-        height: 62%;
+    #date {
+        height: 70px;
+        width: 200px;
+        font-size: 25px;
+        border: solid black 4px;
+    }
+
+    .top{
+        margin-top: 70px;
+    }
+
+    #searchbtn {
+        height: 90px;
+        width: 15%;
+        border: solid black 4px;
+    }
+
+    #search {
+        height: 90px;
+        font-size: 28px;
+        border: solid black 4px;
+    }
+
+    i.material-icons{
+        font-size: 48px;
+    }
+
+    .div-addtask {
+        width: 96%;
+        border: solid black 4px;
+    }
+
+    #addicon{
+        font-size: 80px;
+    }
+
+
+}
+
+/*@media only screen and (min-width: 1024px) {
+
+    .div-addtask{
+        width: 97%;
+    }
+
+    button#searchbtn{
+        width: 17%;
+        margin-right: 29px;
+    }
+
+    
+}*/
+
+@media only screen and (min-width: 1280px) {
+    #search{
+        width: 100%;
+    }
+
+    #searchbtn{
+        width: 12%;
+        margin-right: 117px;
     }
 }
 
-@media (width >= 96rem) {
-    .searchselector{
-        height: 23%;
-    }
-}

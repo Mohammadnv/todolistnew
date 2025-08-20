@@ -6,7 +6,7 @@ import { map } from 'rxjs/operators';
 
 @Injectable({ providedIn: 'root' })
 export class TodolistService {
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   gettodolist(): Observable<todoitems[]> {
     const todolistapi = 'https://dummyjson.com/todos';
@@ -16,5 +16,11 @@ export class TodolistService {
     );
   }
 
-  
+  addtotodolist(newTask: Partial<todoitems>): Observable<todoitems> {
+  const addtaskapi = 'https://dummyjson.com/todos/add';
+  return this.http.post<todoitems>(addtaskapi, newTask);
 }
+
+
+}
+

@@ -16,24 +16,13 @@ import { TodoComponent } from '../todolist/todo.component';
 export class MainComponent implements OnInit {
 
     searchText: string = '';
-    ispopupopen = false;
-
-    openpopup(){
-        this.ispopupopen = true;
-    }
-
-    closepopup(){
-        this.ispopupopen = false
-    }
-
+    
     onSearchChanged(value: string) {
         this.searchText = value;
         debugger
     }
 
-    adddata(){
-        
-    }
+    
 
     constructor() { }
 

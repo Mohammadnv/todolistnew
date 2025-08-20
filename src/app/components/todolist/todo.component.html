@@ -1,18 +1,28 @@
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
 <div class=" buttons">
-  <button (click)="alltasksonclick()">همه وظیفه ها({{alltsks}})</button>
-  <button (click)="completedonclick()">وظیفه های انجام شده({{comtasks}})</button>
+  <button id="alldutys" (click)="alltasksonclick()">همه وظیفه ها({{alltsks}})</button>
+  <button id="donedutys" (click)="completedonclick()">وظیفه های انجام شده({{comtasks}})</button>
 </div>
 
 <div class="task-box">
-  
+
 
   <cdk-virtual-scroll-viewport itemSize="100" class="example-viewport">
     <div *ngIf="filtertodos.length === 0" class="empty-message">
       <p>هیچ وظیفه‌ای مطابق با فیلتر یافت نشد.</p>
     </div>
 
-    <mat-card *ngFor="let todo of filtertodos" class="task-card" [ngClass]="{ 'done': todo.completed, 'pending': !todo.completed }">
-      <mat-card-header>
+    <mat-card *ngFor="let todo of filtertodos" class="task-card"
+      [ngClass]="{ 'done': todo.completed, 'pending': !todo.completed }">
+      <mat-card-header class="headercard">
+
+        <!--<button class="deletebtn"  (click)="handeldeletetask()"><i id="deletbtn" class="material-icons">delete</i>
+        </button>-->
+
         <mat-card-title id="usernum">شناسه کاربر: {{ todo.userId }}</mat-card-title>
       </mat-card-header>
       <mat-card-content id="duty-title">
@@ -21,7 +31,33 @@
         <p id="duty">{{ todo.todo }}</p>
         <p id="status">وضعیت: {{ todo.completed ? 'انجام شده' : 'در حال انجام' }}</p>
       </mat-card-content>
+      <button (click)="handeltasksstatus(todo)" *ngIf="!todo.completed" class="donebtn">انجام شد!</button>
     </mat-card>
   </cdk-virtual-scroll-viewport>
+
+
+</div>
+
+<!--<div class="addtask">
+  <button (click)="openpopup()"><i class="material-icons" style="font-size:32px;color:rgb(255, 255, 255)">add</i>
+  </button>
+</div>
+-->
+
+
+<div *ngIf="isopenpopup" class="popup">
+
+
+
+
+  <label for="">شناسه کاربری</label>
+  <input type="number" [(ngModel)]="newuserid">
+  <label for="">وظیفه</label>
+  <input type="text" ngModel [(ngModel)]="newusertask">
+  <div class="popupbuttons">
+    <button id="addbtnpopup">ثبت</button>
+
+    <button id="canceltaskpopup" (click)="closepopup()">لغو</button>
+  </div>
 
 </div>
