@@ -3,14 +3,15 @@
     display: flex;
     justify-content: space-between;
     margin-top: 42px;
+    height: 39%;
 }
 
 #search {
-    width: 310px;
+    width: 80%;
+    height: 54%;
     border-radius: 6px;
     background: #ebf3ec;
-    padding-left: 10px;
-    margin-left: 35px;
+    margin-left: 29px;
     text-align: right;
     border: solid black 2px;
 }
@@ -18,7 +19,7 @@
 
 #searchbtn {
     width: 45px;
-    height: 35px;
+    height: 54%;
     margin-left: 5px;
     background-color: #f3bc14;
     border-radius: 6px;
@@ -36,7 +37,7 @@
 }
 
 .times p {
-    width: 50px;
+    width: 60px;
     height: 50px;
     border-radius: 6px;
     font-size: 11px;
@@ -60,6 +61,7 @@
 
 #date {
     margin-left: 35px;
+    ;
 }
 
 #clock {
@@ -70,13 +72,12 @@
     border: 2px solid black;
 }
 
-#addicon{
-    font-size:36px
+#addicon {
+    font-size: 36px
 }
 
 .div-addtask {
     display: flex;
-    justify-content: center;
     align-items: center;
     height: 22%;
     width: 344px;
@@ -86,147 +87,95 @@
     margin-left: 35px;
     margin-right: 35px;
     background-color: #ebf3ec;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
 }
 
-.div-addtask button{
-    
+.input-addtask {
+    background-color: #f0faf9;
+    height: 70%;
+    width: 80%;
+    font-size: 13px;
+    text-align: right;
+    padding-right: 10px;
+    border-radius: 10px;
+}
+
+.addinftaskbtn {
+    background: #f3bc14;
+    width: 16%;
+    border-radius: 10px;
+}
+
+#addicon {
+    font-size: 32px;
 }
 
 
-@media only screen and (min-width: 360px) {
-    .div-addtask {
-        width: 292px;
-    }
-}
-
-@media only screen and (min-width: 375px) {
-    .div-addtask {
-        width: 308px;
-    }
-}
-
-@media only screen and (min-width: 390px) {
-    .div-addtask {
-        width: 323px;
-    }
-}
-
-@media only screen and (min-width: 414px) {
-    .div-addtask {
-        width: 347px;
-    }
-}
-
-@media only screen and (min-width: 412px) {
-    .div-addtask {
-        width: 344px;
-    }
-}
-
-@media only screen and (min-width: 430px) {
-    .div-addtask {
-        width: 362px;
-    }
-}
 
 @media only screen and (min-width: 768px) {
-    #searchbtn {
-        width: 11%;
-    }
-
     #search {
-        width: 80%;
+        margin-left: 60px;
     }
 
-    .div-addtask {
-        width: 91%;
+    #searchbtn {
+        margin-right: 60px;
+        width: 20%;
     }
 
-    #clock {
-        height: 40px;
-        width: 80px;
+    #searchbtn {
+        font-size: 36px;
     }
 
-    #date {
-        height: 40px;
-        width: 80px;
+    .times p {
+        width: 85px;
+        font-size: 13px;
     }
-}
 
-@media only screen and (min-width: 820px) {
     .top h1 {
-        font-size: 47px;
+        margin-right: 35px;
     }
 
-    #clock {
-        height: 70px;
-        width: 200px;
-        font-size: 25px;
-        margin-left: 10px;
-        border: solid black 4px;
-    }
-
-    #date {
-        height: 70px;
-        width: 200px;
-        font-size: 25px;
-        border: solid black 4px;
-    }
-
-    .top{
-        margin-top: 70px;
-    }
-
-    #searchbtn {
-        height: 90px;
-        width: 15%;
-        border: solid black 4px;
-    }
-
-    #search {
-        height: 90px;
-        font-size: 28px;
-        border: solid black 4px;
-    }
-
-    i.material-icons{
-        font-size: 48px;
-    }
-
-    .div-addtask {
-        width: 96%;
-        border: solid black 4px;
-    }
-
-    #addicon{
-        font-size: 80px;
+    .times {
+        margin-left: 25px;
     }
 
 
 }
 
-/*@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1024px) {
 
-    .div-addtask{
-        width: 97%;
-    }
-
-    button#searchbtn{
-        width: 17%;
-        margin-right: 29px;
-    }
-
-    
-}*/
-
-@media only screen and (min-width: 1280px) {
     #search{
-        width: 100%;
+        margin-left: 80px;
     }
 
     #searchbtn{
-        width: 12%;
-        margin-right: 117px;
+        margin-right: 80px;
     }
+
+    .search-box {
+        margin: auto;
+        margin-top: 35px;
+    }
+
+    .times {
+        margin-left: 45px;
+    }
+
+
 }
 
+@media only screen and (width >= 1440px) {
+    #search{
+        margin-left: 70px;
+    }
+
+    #searchbtn{
+        margin-right: 70px;
+    }
+
+    .times {
+        margin-left: 35px;
+    }
+}

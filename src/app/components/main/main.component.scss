@@ -7,19 +7,18 @@ html {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    background-color: #f0faf9;
+    background-color: rgb(255 242 203);
 }
 
 .div-todo {
-    height: 68%;
+    height: 76%;
     width: 84%;
     /* margin: auto; */
     background-color: #ebf3ec;
     border-radius: 10px;
     border: solid 2px black;
-    margin-left: 35px;
-    margin-right: 35px;
-    margin-top: 30px;
+    margin: auto;
+    margin-bottom: 20px;
 }
 
 .add-btn {
@@ -45,59 +44,20 @@ html {
 .searchselector {
     width: 100%;
     height: 24%;
-    background-color: #f0faf9;
+    background-color: rgb(255 242 203);
 }
 
-
-//responsive querys//
-
-
-@media only screen and (max-width: 375px) {
-    .div-todo {
-        width: 82%;
-        height: 63%;
-        margin-top: 60px;
-    }
-}
-
-@media only screen and (min-width: 768px) {
-    .div-todo {
-        width: 91%;
-        height: 59%;
-    }
-}
-
-@media only screen and (min-width: 820px) {
-    .div-todo {
-        height: 95%;
-        width: 96%;
-        margin-top: 0px;
-        border: solid black 4px;
-    }
-}
-
-/*@media only screen and (min-width: 1024px) {
-    .main-div {
-        height: 98vh;
-    }
-
-    search-selector.searchselector{
-        height: 19%;
-    }
-
+@media only screen and (min-width: 1024px) {
     .div-todo{
-        height: 46%;
-        width: 97%;
-    }
-}*/
-
-@media only screen and (min-width: 1280px) {
-    .searchselector{
-        height: 30%;
-    }
-
-    .div-todo{
-        height: 67%;
+        height: 77%;
     }
 }
 
+
+@media only screen and (min-width: 1440px) {
+    .div-todo{
+        width: 90%;
+        height: 77%;
+    }
+
+}

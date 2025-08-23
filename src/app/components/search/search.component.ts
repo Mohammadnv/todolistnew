@@ -13,34 +13,39 @@ import { PopupService } from '../../services/pop-up/popup.service';
 
 export class SearchComponent implements OnInit {
     todo: any;
-    currentTime:string =''
+    currentTime: string = ''
+    today = new Date()
+    
 
     @Output() searchchanged = new EventEmitter<string>();
     searchvalue: string = ""
 
+    
+    constructor(private popupservice: PopupService) {
+        setInterval(() => {
+            const now = new Date();
+            this.currentTime = now.toLocaleTimeString();
+        }, 1000);
 
-    constructor( private popupservice : PopupService) { setInterval(() => {
-      const now = new Date();
-      this.currentTime = now.toLocaleTimeString();
-    }, 1000);
-  
-}
-
-    openform(){
-        this.popupservice.openpopup();
     }
 
     searchbtn() {
         this.searchchanged.emit(this.searchvalue)
         debugger
     }
+
     
 
-    today = new Date()
 
-     
-  
-    
 
-    ngOnInit() { }
+
+
+    ngOnInit() {
+
+
+
+    }
+
+
+
 }

@@ -3,7 +3,7 @@
 
 <body>
     <div class="main-div">
-        <search-selector class="searchselector" (searchchanged)="onSearchChanged($event)"></search-selector>
+        <search-selector  class="searchselector" (searchchanged)="onSearchChanged($event)"></search-selector>
         <div class="div-todo">
             <todo-selector style="width: 100%; height: 61%;" [filtertext]="searchText"></todo-selector>
         </div>

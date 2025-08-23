@@ -3,11 +3,19 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 
-<div class=" buttons">
+
+
+<!--<div class=" buttons">
   <button id="alldutys" (click)="alltasksonclick()">همه وظیفه ها({{alltsks}})</button>
   <button id="donedutys" (click)="completedonclick()">وظیفه های انجام شده({{comtasks}})</button>
-</div>
+</div>-->
 
+
+<div class="div-addtask">
+  <input type="text" class="input-addtask" placeholder=".......اضافه کردن وظیفه جدید" [(ngModel)]="gettask">
+  <button class="addinftaskbtn" (click)="handeltasknew()"><i id="addicon" class="material-icons">add</i>
+  </button>
+</div>
 <div class="task-box">
 
 
@@ -16,48 +24,33 @@
       <p>هیچ وظیفه‌ای مطابق با فیلتر یافت نشد.</p>
     </div>
 
-    <mat-card *ngFor="let todo of filtertodos" class="task-card"
-      [ngClass]="{ 'done': todo.completed, 'pending': !todo.completed }">
+    <mat-card *ngFor="let todo of taskslist" class="task-card">
+
       <mat-card-header class="headercard">
 
         <!--<button class="deletebtn"  (click)="handeldeletetask()"><i id="deletbtn" class="material-icons">delete</i>
         </button>-->
 
-        <mat-card-title id="usernum">شناسه کاربر: {{ todo.userId }}</mat-card-title>
       </mat-card-header>
       <mat-card-content id="duty-title">
+        <div>
         <p>:وظیفه</p>
         <br>
-        <p id="duty">{{ todo.todo }}</p>
-        <p id="status">وضعیت: {{ todo.completed ? 'انجام شده' : 'در حال انجام' }}</p>
+        <p id="duty">{{ todo }}</p>
+        </div>
+        <div class="tasksbutton">
+        <button id="deletetask"><i  id="delicon" class="material-icons" style="font-size:30px">done</i></button>
+        <button id="donetask"><i  id="doneicon" class="material-icons" style="font-size:30px">delete</i>
+        </button>
+        </div>
       </mat-card-content>
-      <button (click)="handeltasksstatus(todo)" *ngIf="!todo.completed" class="donebtn">انجام شد!</button>
+
+
+
     </mat-card>
+
+
   </cdk-virtual-scroll-viewport>
 
-
-</div>
-
-<!--<div class="addtask">
-  <button (click)="openpopup()"><i class="material-icons" style="font-size:32px;color:rgb(255, 255, 255)">add</i>
-  </button>
-</div>
--->
-
-
-<div *ngIf="isopenpopup" class="popup">
-
-
-
-
-  <label for="">شناسه کاربری</label>
-  <input type="number" [(ngModel)]="newuserid">
-  <label for="">وظیفه</label>
-  <input type="text" ngModel [(ngModel)]="newusertask">
-  <div class="popupbuttons">
-    <button id="addbtnpopup">ثبت</button>
-
-    <button id="canceltaskpopup" (click)="closepopup()">لغو</button>
-  </div>
 
 </div>
