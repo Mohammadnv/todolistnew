@@ -12,7 +12,7 @@ html {
 
 .div-todo {
     height: 76%;
-    width: 84%;
+    width: 90%;
     /* margin: auto; */
     background-color: #ebf3ec;
     border-radius: 10px;
@@ -45,19 +45,31 @@ html {
     width: 100%;
     height: 24%;
     background-color: rgb(255 242 203);
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
 }
 
-@media only screen and (min-width: 1024px) {
-    .div-todo{
+/*@media only screen and (min-width: 1024px) {
+    .div-todo {
         height: 77%;
     }
 }
+*/
 
-
-@media only screen and (min-width: 1440px) {
-    .div-todo{
+/*@media only screen and (min-width: 1440px) {
+    .div-todo {
         width: 90%;
         height: 77%;
     }
 
 }
+*/
+/*@media only screen and (min-width: 2560px) {
+    .searchselector{
+        margin-top: 30px;
+    }
+}
+*/
+

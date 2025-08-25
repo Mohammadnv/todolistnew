@@ -19,7 +19,6 @@ export class MainComponent implements OnInit {
     
     onSearchChanged(value: string) {
         this.searchText = value;
-        debugger
     }
 
     

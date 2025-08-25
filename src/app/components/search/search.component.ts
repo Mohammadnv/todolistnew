@@ -2,7 +2,6 @@ import { Component, EventEmitter, OnInit, Output, output } from '@angular/core';
 import { TodolistService } from '../../services/todolist/todolist.service';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { PopupService } from '../../services/pop-up/popup.service';
 
 @Component({
     selector: 'search-selector',
@@ -15,26 +14,21 @@ export class SearchComponent implements OnInit {
     todo: any;
     currentTime: string = ''
     today = new Date()
-    
+    time = new Date
+
+
 
     @Output() searchchanged = new EventEmitter<string>();
     searchvalue: string = ""
 
-    
-    constructor(private popupservice: PopupService) {
-        setInterval(() => {
-            const now = new Date();
-            this.currentTime = now.toLocaleTimeString();
-        }, 1000);
 
-    }
 
-    searchbtn() {
+    searchinput() {
         this.searchchanged.emit(this.searchvalue)
-        debugger
+        
     }
 
-    
+
 
 
 
@@ -42,7 +36,10 @@ export class SearchComponent implements OnInit {
 
     ngOnInit() {
 
-
+        setInterval(() => {
+            const now = new Date();
+            this.currentTime = now.toLocaleTimeString();
+        }, 1000);
 
     }
 

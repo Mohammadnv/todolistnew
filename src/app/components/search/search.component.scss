@@ -1,31 +1,31 @@
 .search-box {
-    width: 100%;
+    width: 90%;
     display: flex;
     justify-content: space-between;
-    margin-top: 42px;
+    margin: auto;
     height: 39%;
+    align-items: end;
 }
 
 #search {
-    width: 80%;
+    width: 86%;
     height: 54%;
     border-radius: 6px;
     background: #ebf3ec;
-    margin-left: 29px;
     text-align: right;
     border: solid black 2px;
+    font-size: 18px;
 }
 
 
 #searchbtn {
-    width: 45px;
+    width: 14%;
     height: 54%;
     margin-left: 5px;
     background-color: #f3bc14;
     border-radius: 6px;
     color: black;
     border: solid 2px black;
-    margin-right: 35px;
     cursor: pointer;
 }
 
@@ -34,11 +34,13 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 30px;
+    width: 90%;
+    margin: auto;
 }
 
 .times p {
     width: 60px;
-    height: 50px;
+    height: 40px;
     border-radius: 6px;
     font-size: 11px;
     align-content: center;
@@ -46,12 +48,12 @@
     background-color: #f3bc14;
     color: black;
     border: solid 2px black;
+    margin-right: 3px ;
 }
 
 .top h1 {
     font-size: 26px;
     color: rgb(0, 0, 0);
-    padding-right: 35px;
     font-family: vazirbold;
 }
 
@@ -59,14 +61,6 @@
     display: flex;
 }
 
-#date {
-    margin-left: 35px;
-    ;
-}
-
-#clock {
-    margin-left: 3px;
-}
 
 .addtask {
     border: 2px solid black;
@@ -115,12 +109,9 @@
 
 
 @media only screen and (min-width: 768px) {
-    #search {
-        margin-left: 60px;
-    }
 
     #searchbtn {
-        margin-right: 60px;
+
         width: 20%;
     }
 
@@ -133,49 +124,61 @@
         font-size: 13px;
     }
 
-    .top h1 {
-        margin-right: 35px;
-    }
-
-    .times {
-        margin-left: 25px;
-    }
-
 
 }
 
 @media only screen and (min-width: 1024px) {
 
-    #search{
-        margin-left: 80px;
-    }
 
-    #searchbtn{
-        margin-right: 80px;
-    }
 
     .search-box {
         margin: auto;
         margin-top: 35px;
-    }
-
-    .times {
-        margin-left: 45px;
+        height: 50%;
     }
 
 
 }
 
-@media only screen and (width >= 1440px) {
-    #search{
-        margin-left: 70px;
+
+@media only screen and (width >=2560px) {
+    #search {
+        font-size: 26px;
+
+        width: 86%;
     }
 
-    #searchbtn{
-        margin-right: 70px;
+    #searchbtn {
+        font-size: 54px;
+
+        width: 14%;
     }
 
-    .times {
-        margin-left: 35px;
+    .search-box {
+        width: 90%;
+    }
+
+    .top {
+        margin: auto;
+        width: 90%;
+    }
+
+    .top h1 {
+        font-size: 50px;
+    }
+
+
+    .top p {
+        width: 170px;
+        height: 80px;
+        font-size: 26px;
+    }
+
+
+}
+
+@media only screen and (min-width: 375px) {
+    #searchbtn {
+        width: 20%;
     }
 }

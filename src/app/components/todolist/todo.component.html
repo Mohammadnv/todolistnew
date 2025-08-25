@@ -1,56 +1,35 @@
-<head>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-</head>
-
-
-
-<!--<div class=" buttons">
-  <button id="alldutys" (click)="alltasksonclick()">همه وظیفه ها({{alltsks}})</button>
-  <button id="donedutys" (click)="completedonclick()">وظیفه های انجام شده({{comtasks}})</button>
-</div>-->
-
-
 <div class="div-addtask">
   <input type="text" class="input-addtask" placeholder=".......اضافه کردن وظیفه جدید" [(ngModel)]="gettask">
-  <button class="addinftaskbtn" (click)="handeltasknew()"><i id="addicon" class="material-icons">add</i>
+  <button class="addinftaskbtn" (click)="handeltasknew()">
+    <i id="addicon" class="material-icons">add</i>
   </button>
 </div>
+
 <div class="task-box">
-
-
   <cdk-virtual-scroll-viewport itemSize="100" class="example-viewport">
-    <div *ngIf="filtertodos.length === 0" class="empty-message">
+    
+    <div *ngIf="filteredTasks.length === 0" class="empty-message">
       <p>هیچ وظیفه‌ای مطابق با فیلتر یافت نشد.</p>
     </div>
 
-    <mat-card *ngFor="let todo of taskslist" class="task-card">
-
-      <mat-card-header class="headercard">
-
-        <!--<button class="deletebtn"  (click)="handeldeletetask()"><i id="deletbtn" class="material-icons">delete</i>
-        </button>-->
-
-      </mat-card-header>
+    <mat-card *ngFor="let todo of filteredTasks; let i = index" class="task-card">
+      <mat-card-header class="headercard"></mat-card-header>
       <mat-card-content id="duty-title">
-        <div>
-        <p>:وظیفه</p>
-        <br>
-        <p id="duty">{{ todo }}</p>
+        <div [ngClass]="{ 'donetasktitle': todo.completed }" class="task-title">
+          <p>:وظیفه</p>
+          <br>
+          <p [ngClass]="{ 'donetask': todo.completed }" class="duty">{{ todo.title }}</p>
         </div>
         <div class="tasksbutton">
-        <button id="deletetask"><i  id="delicon" class="material-icons" style="font-size:30px">done</i></button>
-        <button id="donetask"><i  id="doneicon" class="material-icons" style="font-size:30px">delete</i>
-        </button>
+          <button id="deletetask">
+            <i id="delicon" (click)="handeldeltetask(i)" class="material-icons">delete</i>
+          </button>
+          <button id="donetask">
+            <i id="doneicon" (click)="handeldonetask(i)" class="material-icons">done</i>
+          </button>
         </div>
       </mat-card-content>
-
-
-
     </mat-card>
-
-
+    
   </cdk-virtual-scroll-viewport>
-
-
 </div>

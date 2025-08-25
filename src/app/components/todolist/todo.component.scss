@@ -31,8 +31,9 @@ mat-card {
 
 
 .task-card {
-    margin-bottom: 1rem;
+    margin-bottom: 10px;
     transition: transform 0.2s ease-in-out;
+
 
     &:hover {
         transform: scale(1.02);
@@ -41,6 +42,8 @@ mat-card {
 
 
 }
+
+
 
 mat-card-content {
     font-size: 14px;
@@ -52,8 +55,17 @@ mat-card-title {
     font-family: vazirbold;
 }
 
-#duty {
+.duty {
     font-size: 14px;
+    text-decoration: none;
+}
+
+.donetask {
+    text-decoration: line-through 2px;
+}
+
+.donetasktitle {
+    filter: blur(1px);
 }
 
 #status {
@@ -96,6 +108,10 @@ br {
     line-height: 6px;
 }
 
+.empty-message p{
+    text-align: center;
+}
+
 
 //.done {
 //  box-shadow: 3px 3px lightgreen;
@@ -134,6 +150,7 @@ br {
     color: black;
     padding: 2px;
     border-top: solid black 2px;
+    cursor: pointer;
 }
 
 .donebtn:hover {
@@ -219,7 +236,47 @@ mat-card.mat-mdc-card.mdc-card.task-card {
     padding: 4px;
 }
 
+#delicon {
+    font-size: 30px
+}
 
+#doneicon {
+    font-size: 30px
+}
+
+
+
+
+@media only screen and (min-width: 375px) {
+    mat-card.mat-mdc-card.mdc-card.task-card {
+        width: 90%;
+        margin: auto;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+
+    .task-box {
+        width: 100%;
+    }
+
+    .div-addtask {
+        height: 10%;
+    }
+
+    .tasksbutton {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    #delicon {
+        font-size: 20px;
+    }
+
+    #doneicon {
+        font-size: 20px;
+    }
+}
 
 
 
@@ -245,11 +302,19 @@ mat-card.mat-mdc-card.mdc-card.task-card {
     }
 
     mat-card.mat-mdc-card.mdc-card.task-card {
-        width: 86%;
+        width: 90%
     }
 
     .example-viewport {
         height: 98%;
+    }
+
+    #delicon {
+        font-size: 28px;
+    }
+
+    #doneicon {
+        font-size: 28px;
     }
 
 
@@ -257,13 +322,40 @@ mat-card.mat-mdc-card.mdc-card.task-card {
 
 @media only screen and (min-width: 1024px) {
     mat-card.mat-mdc-card.mdc-card.task-card {
-        width: 86%;
-        margin-left: 42px;
+        width: 90%;
+
     }
 }
 
 @media only screen and (width >=1440px) {
+    mat-card.mat-mdc-card.mdc-card.task-card {}
+
+    #delicon {
+        font-size: 32px;
+    }
+
+    #doneicon {
+        font-size: 32px;
+    }
+}
+
+@media only screen and (min-width: 2560px) {
+
     mat-card.mat-mdc-card.mdc-card.task-card {
-        margin-left: 64px;
+        width: 90%;
+        margin: auto;
+        margin-bottom: 10px;
+    }
+
+    #duty-title p {
+        font-size: xx-large;
+    }
+
+    #delicon {
+        font-size: 53px;
+    }
+
+    #doneicon {
+        font-size: 53px;
     }
 }
