@@ -4,7 +4,7 @@
 </head>
 <div class="top">
     <div class="times">
-        <p id="date">{{ today | date:'MMMM d' }}</p>
+        <p id="date">{{ currentDate }}</p>
         <p id="clock">{{ currentTime }}</p>
     </div>
     <div>
@@ -14,10 +14,12 @@
 
 
 <div class="search-box">
-    <input type="search" id="search" placeholder="جستوجو" [(ngModel)]="searchvalue">
-    <button id="searchbtn" (click)="searchinput()">
+    
+    <button id="searchbtn" >
         <i class="material-icons">search</i>
     </button>
+
+    <input type="search" id="search" placeholder="جستوجو" [(ngModel)]="searchvalue" (input)="handellivesearch()">
 
 
 

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, Input, OnInit, OnChanges, SimpleChanges, signal } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { CommonModule } from '@angular/common';
 import { ScrollingModule } from '@angular/cdk/scrolling';
@@ -16,7 +16,7 @@ import { todoitems } from '../../services/todolist/todolist.model';
 export class TodoComponent implements OnInit, OnChanges {
   @Input() filtertext: string = "";
 
-  constructor(private todolistservice: TodolistService) {}
+  constructor(private todolistservice: TodolistService) { }
 
   todos: todoitems[] = [];
   taskslist: { title: string, completed: boolean }[] = [];
@@ -25,6 +25,7 @@ export class TodoComponent implements OnInit, OnChanges {
 
   ngOnInit() {
     this.loadTasks();
+
   }
 
   ngOnChanges(changes: SimpleChanges): void {
@@ -70,14 +71,12 @@ export class TodoComponent implements OnInit, OnChanges {
   handeldeltetask(index: number) {
     const taskToDelete = this.filteredTasks[index];
 
-    // حذف از لیست اصلی
     this.taskslist = this.taskslist.filter(task => task.title !== taskToDelete.title);
 
-    // آپدیت لیست فیلتر شده
     this.filteredTasks = this.taskslist.filter(task =>
       task.title.toLowerCase().includes(this.filtertext.toLowerCase())
-    );
 
+    );
     this.saveTasksToLocal();
   }
 
@@ -91,4 +90,5 @@ export class TodoComponent implements OnInit, OnChanges {
     const taskTitles = this.taskslist.map(task => task.title);
     localStorage.setItem("task", JSON.stringify(taskTitles));
   }
+
 }

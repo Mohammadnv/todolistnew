@@ -15,6 +15,7 @@ export class SearchComponent implements OnInit {
     currentTime: string = ''
     today = new Date()
     time = new Date
+    currentDate: string = ''
 
 
 
@@ -23,7 +24,7 @@ export class SearchComponent implements OnInit {
 
 
 
-    searchinput() {
+    handellivesearch() {
         this.searchchanged.emit(this.searchvalue)
         
     }
@@ -38,8 +39,10 @@ export class SearchComponent implements OnInit {
 
         setInterval(() => {
             const now = new Date();
-            this.currentTime = now.toLocaleTimeString();
+            this.currentTime = now.toLocaleTimeString("fa-IR")
         }, 1000);
+
+        this.currentDate = this.today.toLocaleDateString('fa-IR');
 
     }
 
